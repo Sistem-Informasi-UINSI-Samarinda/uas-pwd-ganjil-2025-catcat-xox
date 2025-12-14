@@ -1,0 +1,204 @@
+body{
+    background-image: url('../../assets/images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Hero section untuk about */
+.hero-about {
+    background-image: url('../../assets/images/background-10.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #007bff;
+    padding-top: 80px; 
+    margin-top: 0; 
+}
+
+.judul{
+    margin-bottom: 100px;
+}
+
+.hero-about h1 {
+
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-about p {
+    color: #151515;
+    font-size: 1rem;
+    max-width: 900px;
+    animation: fadeIn 1s ease-in-out 0.1s both;
+    margin: 0 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bagian tentang kami */
+.about-section {
+    background-color: #e9f4ff;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Bagian visi dan misi */
+.vision-mission {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e9f4ff;
+}
+
+.vision-mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.vm-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s;
+}
+
+.vm-item:hover{
+    transform: scale(1.05);
+}
+
+.vm-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.vm-item p {
+    color: #666;
+}
+
+/* Bagian tim */
+
+.team {
+    background-color: #e9f4ff;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+@media (max-width:780px){
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}

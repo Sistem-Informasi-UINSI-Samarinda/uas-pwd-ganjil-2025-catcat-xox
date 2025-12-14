@@ -1,0 +1,87 @@
+/* Konten utama */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgb(130, 130, 130);
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    font-size: 2rem;
+}
+
+/* isi */
+
+
+   .testimoni-container {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tambah-testimoni {
+        background: white;
+        padding: 25px 30px;
+        width: 100%;
+        max-width: 700px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        border-top: 4px solid #1d4ed8;
+    }
+
+    .tambah-testimoni label {
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        display: block;
+        font-size: 14px;
+    }
+
+    .tambah-testimoni h2 {
+        text-align: center;
+        margin-bottom: 18px;
+        color: #1e3a8a;
+        font-weight: bold;
+    }
+
+    .tambah-testimoni input,
+    .tambah-testimoni textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 12px;
+        border: 1px solid #bcd4ff;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #f8fbff;
+        transition: .25s;
+    }
+
+    .tambah-testimoni input:focus,
+    .tambah-testimoni textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 7px rgba(37, 99, 235, 0.35);
+        background: white;
+    }
+
+    .tambah-testimoni button {
+        width: 100%;
+        padding: 12px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: .3s;
+        font-weight: bold;
+    }
+
+    .tambah-testimoni button:hover {
+        background: #1d4ed8;
+    }

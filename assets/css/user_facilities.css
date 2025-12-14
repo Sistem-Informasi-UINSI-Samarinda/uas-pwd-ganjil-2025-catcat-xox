@@ -1,0 +1,222 @@
+
+body{
+    background-image: url('../../assets/images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+}
+
+/* Hero facilities */
+.hero-facilities {
+    background-image: url('../../assets/images/background-15.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    margin: 0px 0px 10px; 
+}
+
+.judul{
+    padding-bottom: 50px;
+}
+
+.hero-facilities h1 {
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+    margin: 0 5px;
+}
+
+.hero-facilities p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    animation: fadeIn 1s ease-in-out 0.2s both;
+    color: #333333;
+    margin: 14px 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Bagian fasilitas */
+.facilities-section {
+    background-image: url('../../assets/images/background-11.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 60px 20px;
+    max-width: 95%;
+    margin: 30px auto 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.facilities-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.facility-item {
+    background-image: url('../../assets/images/background-6.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.facility-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.facility-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.facility-item h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.facility-item p {
+    color: #666;
+}
+
+/* Galeri Fasilitas */
+.galeri{
+    padding: 60px 0;
+    margin: 10px 40px;
+}
+.galeri h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #007bff;
+}
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.galeri-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #007bff;
+    position: relative;
+}
+.galeri-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.galeri-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.galeri-card:hover img {
+    transform: scale(1.05);
+}
+.galeri-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,123,255,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.galeri-card:hover::before {
+    opacity: 1;
+}
+.galeri-card .content {
+    padding: 20px;
+}
+.galeri-card h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+.galeri-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Bagian tambahan: Keunggulan Fasilitas */
+.advantages {
+    background-image: url('../../assets/images/background-11.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 60px 20px;
+    max-width: 95%;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f4f7fa;
+}
+
+.advantages h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.advantage-item {
+    background-image: url('../../assets/images/background-6.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.advantage-item h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.advantage-item p {
+    color: #666;
+}
