@@ -13,9 +13,9 @@
         <h2>Tentang Kami</h2>
         <div class="about-content">
             <div class="about-text">
-                <h3>Sejarah Kos Nyaman</h3>
-                <p>Kos Nyaman didirikan pada tahun 2015 dengan tujuan menyediakan hunian yang nyaman dan terjangkau bagi mahasiswa dan pekerja muda di kota ini. Dari awalnya hanya beberapa kamar, kami telah berkembang menjadi kos modern dengan fasilitas lengkap.</p>
-                <p>Kami percaya bahwa rumah kedua harus seperti rumah pertama – tempat yang aman, nyaman, dan penuh kehangatan. Dengan dedikasi tim kami, Kos Nyaman terus berinovasi untuk memenuhi kebutuhan penghuni.</p>
+                <h3>Sejarah Kos Berkah</h3>
+                <p>Kos Berkah didirikan pada tahun 2015 dengan tujuan menyediakan hunian yang nyaman dan terjangkau bagi mahasiswa dan pekerja muda di kota ini. Dari awalnya hanya beberapa kamar, kami telah berkembang menjadi kos modern dengan fasilitas lengkap.</p>
+                <p>Kami percaya bahwa rumah kedua harus seperti rumah pertama – tempat yang aman, nyaman, dan penuh kehangatan. Dengan dedikasi tim kami, Kos Berkah terus berinovasi untuk memenuhi kebutuhan penghuni.</p>
             </div>
             <div class="about-image">
                 <img src="../../assets/images/gambar_kos.jpg">

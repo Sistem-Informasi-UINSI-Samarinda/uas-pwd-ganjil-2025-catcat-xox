@@ -58,6 +58,7 @@ if (isset($_GET['id'])) {
                 <li><a href="../../pages/admin/pesan_admin.php" class="menu-link" >Lihat Pesan</a></li>
                 <li><a href="../../pages/admin/generate_admin.php" class="menu-link" >New Admin</a></li>
                 <li><a href="../../pages/admin/testimoni_admin.php" class="menu-link" >Testimoni</a></li>
+                <li><a href="../../pages/admin/fasilitas_admin.php" class="menu-link" >Fasilitas</a></li>
                 <li><a href="../../pages/admin/logout_admin.php" class="menu-link" >Logout</a></li>
             </ul>
         </aside>

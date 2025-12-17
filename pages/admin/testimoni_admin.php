@@ -47,6 +47,7 @@ $testimoni = mysqli_query($conn, $ambiltestimoni);
                 <li><a href="../../pages/admin/pesan_admin.php" class="menu-link" >Lihat Pesan</a></li>
                 <li><a href="../../pages/admin/generate_admin.php" class="menu-link" >New Admin</a></li>
                 <li><a href="../../pages/admin/testimoni_admin.php" class="menu-link" >Testimoni</a></li>
+                <li><a href="../../pages/admin/fasilitas_admin.php" class="menu-link" >Fasilitas</a></li>
                 <li><a href="../../pages/admin/logout_admin.php" class="menu-link" >Logout</a></li>
             </ul>
         </aside>
@@ -70,12 +71,12 @@ $testimoni = mysqli_query($conn, $ambiltestimoni);
                         while($row = mysqli_fetch_assoc($testimoni)){ 
                     ?>
                     <tr>
-                        <td><?= $no++; ?></td>
-                        <td><?= $row['nama']; ?></td>
-                        <td><?= $row['status']; ?></td>
-                        <td><?= $row['isi']; ?></td>
-                        <td><?= $row['tanggal']; ?></td>
-                        <td>
+                        <td class="td-text"><?= $no++; ?></td>
+                        <td class="td-text"><?= $row['nama']; ?></td>
+                        <td class="td-text"><?= $row['status']; ?></td>
+                        <td class="td-text"><?= $row['isi']; ?></td>
+                        <td class="td-text"><?= $row['tanggal']; ?></td>
+                        <td class="td-text">
 
                             <a href="../../pages/admin/edit_testimoni.php?id=<?php echo $row['id'] ?>" class="btn-edit">Edit</a>
                             

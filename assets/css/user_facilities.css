@@ -29,22 +29,16 @@ body{
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
     margin: 0 5px;
 }
 
 .hero-facilities p {
     font-size: 1.2rem;
     max-width: 900px;
-    animation: fadeIn 1s ease-in-out 0.2s both;
     color: #333333;
-    margin: 14px 5px;
+    margin: 14px 10px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* Bagian fasilitas */
 .facilities-section {
@@ -71,9 +65,11 @@ body{
 }
 
 .facility-item {
-    background-image: url('../../assets/images/background-6.jpg');
+    /* background-image: url('../../assets/images/background-6.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
+    background-color: white;
+    border-bottom: 4px solid #007bff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -197,9 +193,10 @@ body{
 }
 
 .advantage-item {
-    background-image: url('../../assets/images/background-6.jpg');
+    /* background-image: url('../../assets/images/background-6.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
+    background-color: whitesmoke;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);

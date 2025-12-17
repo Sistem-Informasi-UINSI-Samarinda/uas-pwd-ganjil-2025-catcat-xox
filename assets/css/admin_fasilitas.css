@@ -1,0 +1,116 @@
+
+.cards {
+    margin-top: 25px;
+    
+}
+
+/* CARD */
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.table-responsive {
+    background-color: white;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+/* TABLE */
+.card table {
+    width: max-content;
+    min-width: 100%;
+}
+
+.card th {
+    background: #2563eb;
+    color: white;
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.card td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.card tr:hover {
+    background: #eef2ff;
+}
+
+/*IMAGE*/
+.card img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ACTION */
+
+.card a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    margin-right: 8px;
+    color: #2563eb;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #1e40af;
+}
+
+.card a:last-child {
+    color: #dc2626;
+}
+
+.card a:last-child:hover {
+    color: #991b1b;
+}
+
+/* BUTTON */
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.btn-tambah {
+    text-decoration: none;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+.btn-tambah:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .card table {
+        min-width: 650px;
+    }
+}

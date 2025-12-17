@@ -1,0 +1,92 @@
+.main-content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 40px;
+}
+
+.cards {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 1000px;
+}
+
+/*FORM*/
+.cards form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.cards input[type="text"],
+.cards textarea,
+.cards input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    transition: 0.3s;
+}
+
+.cards input:focus,
+.cards textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.cards textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.cards img {
+    max-width: 140px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 6px;
+    background: #f9fafb;
+}
+
+.cards input[type="file"] {
+    padding: 10px;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+/* ===== BUTTON ===== */
+.cards button {
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cards button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+    transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .cards {
+        max-width: 100%;
+        padding: 24px;
+    }
+}

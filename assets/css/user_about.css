@@ -25,21 +25,14 @@ body{
 
 .hero-about h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+    margin: 0px 3px 20px;
 }
 
 .hero-about p {
     color: #151515;
     font-size: 1.2rem;
     max-width: 900px;
-    animation: fadeIn 1s ease-in-out 0.1s both;
-    margin: 0 5px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    margin: 0 6px;
 }
 
 /* Bagian tentang kami */

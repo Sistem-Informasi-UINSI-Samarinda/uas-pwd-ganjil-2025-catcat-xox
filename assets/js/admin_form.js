@@ -19,6 +19,3 @@ function showNotif(message = "Saran berhasil dikirim!") {
         n.style.display = "none";
     }, 3000);
 }
-
-
-

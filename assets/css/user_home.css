@@ -145,6 +145,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    border: solid 4px;
+    border-color: #4780bc;
 }
 
 .gallery-item:hover {
@@ -204,6 +206,9 @@ body {
     gap: 30px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .testimonial-item {

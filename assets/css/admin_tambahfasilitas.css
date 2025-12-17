@@ -1,0 +1,87 @@
+/* ===== CARD FORM ===== */
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.card {
+    margin: 10px auto;
+    border-bottom: 3px solid #1f4796;
+    background: #ffffff;
+    padding: 15px 35px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== FORM ===== */
+.card form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.card label {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 2px;
+}
+
+.card input[type="text"],
+.card textarea,
+.card input[type="file"] {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.card input:focus,
+.card textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.card textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.card input[type="file"] {
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.card button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .card {
+        padding: 25px;
+    }
+}

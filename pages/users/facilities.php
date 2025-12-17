@@ -1,3 +1,9 @@
+<?php
+include '../../config/koneksi.php';
+
+$galeri = mysqli_query($conn, "SELECT * FROM fasilitas ORDER BY id_fasilitas DESC");
+?>
+
 <?php include '../../includes/meta.php'; ?>
     <link rel="stylesheet" href="../../assets/css/user_facilities.css">   
 <?php include '../../includes/header.php'; ?>
@@ -36,77 +42,27 @@
     <section class="galeri">
         <div class="container">
             <h2>Galeri Fasilitas</h2>
+
             <div class="galeri-grid">
-                <div class="galeri-card">
-                    <img src="../../assets/images/kamarkos.jpg" alt="Kamar Tidur Nyaman">
-                    <div class="content">
-                        <h3>Kamar Tidur Nyaman</h3>
-                        <p>Kamar tidur yang dirancang untuk kenyamanan maksimal dengan interior modern dan pencahayaan alami.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/kamar mandi.jpg" alt="Kamar Mandi Dalam">
-                    <div class="content">
-                        <h3>Kamar Mandi Dalam</h3>
-                        <p>Kamar mandi pribadi di dalam setiap kamar, dilengkapi dengan shower dan fasilitas lengkap.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/parkiran.jpg" alt="Area Parkir Luas">
-                    <div class="content">
-                        <h3>Area Parkir Luas</h3>
-                        <p>Area parkir yang luas dan aman untuk kendaraan penghuni, dengan pengawasan 24 jam.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/dapur.jpg" alt="Dapur Bersama">
-                    <div class="content">
-                        <h3>Dapur Bersama</h3>
-                        <p>Dapur bersama yang lengkap dengan peralatan memasak modern untuk kenyamanan penghuni.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/balkon.jpg" alt="Ruang Santai">
-                    <div class="content">
-                        <h3>Ruang Santai</h3>
-                        <p>Ruang santai yang nyaman untuk bersantai, membaca, atau bersosialisasi dengan penghuni lain.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/keamanan.jpg" alt="CCTV & Keamanan">
-                    <div class="content">
-                        <h3>CCTV & Keamanan</h3>
-                        <p>Sistem keamanan CCTV 24 jam dan petugas keamanan untuk menjaga kenyamanan penghuni.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/air.jpg" alt="CCTV & Keamanan">
-                    <div class="content">
-                        <h3>Sistem Air Bersih</h3>
-                        <p>Sistem air bersih tersedia 24 jam dengan aliran stabil, memastikan kenyamanan penghuni untuk kebutuhan mandi, mencuci, dan aktivitas harian tanpa gangguan.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/kulkas.jpg">
-                    <div class="content">
-                        <h3>Kulkas Bersama</h3>
-                        <p>Kulkas bersama disediakan untuk menyimpan makanan dan minuman penghuni dengan aman, bersih, dan tertata, mendukung gaya hidup praktis dan nyaman.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/pagar.jpg" alt="CCTV & Keamanan">
-                    <div class="content">
-                        <h3>Pagar & Keamanan Area</h3>
-                        <p>Area kos dilengkapi pagar yang kokoh dan sistem akses terkontrol, memberikan rasa aman serta privasi maksimal bagi seluruh penghuni.</p>
-                    </div>
-                </div>
-                <div class="galeri-card">
-                    <img src="../../assets/images/tangga.jpg" alt="tangga">
-                    <div class="content">
-                        <h3>Tangga Akses</h3>
-                        <p>Tangga dirancang dengan struktur kokoh dan pegangan yang aman, memudahkan akses antar lantai serta menunjang kenyamanan dan keselamatan penghuni dalam aktivitas sehari-hari.</p>
-                    </div>
-                </div>
+
+                <?php if(mysqli_num_rows($galeri) > 0){ ?>
+                    <?php while($row = mysqli_fetch_assoc($galeri)){ ?>
+
+                        <div class="galeri-card">
+                            <img src="../../assets/images/fasilitas/<?= $row['gambar']; ?>" 
+                                alt="<?= $row['nama_fasilitas']; ?>">
+
+                            <div class="content">
+                                <h3><?= $row['nama_fasilitas']; ?></h3>
+                                <p><?= $row['deskripsi']; ?></p>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                <?php } else { ?>
+                    <p>Belum ada galeri fasilitas.</p>
+                <?php } ?>
+
             </div>
         </div>
     </section>

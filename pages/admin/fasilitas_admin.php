@@ -1,16 +1,14 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin'])) {
-    header("Location: login_admin.php");
+    header("Location: login.php");
     exit();
 }
 
 include '../../config/koneksi.php';
-$ambilpesan = "SELECT id, nama, hp, pesan 
-               FROM saran_masukan 
-               ORDER BY id DESC";
 
-$pesan = mysqli_query($conn, $ambilpesan);
+$ambilfasilitas = "SELECT * FROM fasilitas ORDER BY id_fasilitas DESC";
+$fasilitas = mysqli_query($conn, $ambilfasilitas);
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +17,8 @@ $pesan = mysqli_query($conn, $ambilpesan);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Admin - Kos Nyaman</title>
-    <link rel="stylesheet" href="../../assets/css/admin_pesan.css">
     <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/admin_fasilitas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">    
 </head>
 <body>
@@ -39,6 +37,7 @@ $pesan = mysqli_query($conn, $ambilpesan);
         </label>
     </div>
 
+
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>Menu</h2>
@@ -53,40 +52,54 @@ $pesan = mysqli_query($conn, $ambilpesan);
         </aside>
 
         <main class="main-content">
+
             <section class="cards">
+                <div class="table-responsive">
                 <div class="card">
                     <table>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
-                            <th>No.Hp</th>
-                            <th>Pesan</th>
+                            <th>Nama Fasilitas</th>
+                            <th>Deskripsi</th>
+                            <th>Gambar</th>
                             <th>Action</th>
-
                         </tr>
+
                         <?php 
                         $no = 1;
-                        if(mysqli_num_rows($pesan) > 0){
-                            while($row = mysqli_fetch_assoc($pesan)){ 
+                        if(mysqli_num_rows($fasilitas) > 0){
+                            while($row = mysqli_fetch_assoc($fasilitas)){ 
                         ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $row['nama']; ?></td>
-                            <td><?= $row['hp']; ?></td>
-                            <td><?= $row['pesan']; ?></td>
+                            <td><?= $row['nama_fasilitas']; ?></td>
+                            <td><?= substr($row['deskripsi'], 0, 60); ?>...</td>
                             <td>
-
-                                <a href="../../pages/admin/hapus_pesan.php?id=<?php echo $row['id'] ?>" onclick="return confirm('Yakin ingin menghapus kategori ini?')" class="btn-hapus">Hapus</a>
-                                
+                            <img src="../../assets/images/fasilitas/<?= $row['gambar']; ?>" width="80">
+                            </td>
+                            <td>
+                            <a href="../../pages/admin/edit_fasilitas.php?id=<?= $row['id_fasilitas']; ?>">EDIT</a> |
+                            <a href="../../pages/admin/hapus_fasilitas.php?id=<?= $row['id_fasilitas']; ?>" 
+                                onclick="return confirm('Yakin ingin menghapus fasilitas ini?')">
+                                HAPUS
+                            </a>
                             </td>
                         </tr>
-                        <?php   
-                            }
-                        } ?>
+                    <?php   
+                        }
+                    } ?>
                     </table>
                 </div>
-                
+                </div>
+
+
+                <div class="btn-container">
+                    <a href="tambahfasilitas_admin.php" class="btn-tambah"> + Tambah Fasilitas </a>
+                </div>
+
             </section>
+
+
         </main>
 </body>
 </html>
