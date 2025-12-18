@@ -14,18 +14,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
            
         </div>
 
-        <!-- <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger"  > <i class="fa-solid fa-bars"> </i> </label>
-            <ul>
-                <li><a href="../../index.php" class="nav-link active">Home</a></li>
-                <li><a href="../../pages/users/Facilities.php" class="nav-link">Fasilitas</a></li>
-                <li><a href="../../pages/users/Contact.php" class="nav-link">Contact</a></li>
-                <li><a href="../../pages/users/About.php" class="nav-link">About</a></li>
-                <li><a href="../../pages/admin/login_admin.php" class="nav-link">Admin</a></li>
-            </ul>
-        </nav> -->
-
         <nav>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="hamburger">

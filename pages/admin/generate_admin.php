@@ -17,7 +17,7 @@ $kategori = mysqli_query($conn, $tes);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Admin - Kos Nyaman</title>
+    <title>Kos Berkah</title>
     <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
     <link rel="stylesheet" href="../../assets/css/admin_generate.css">
     <script src="../../assets/js/admin_form.js"></script>
