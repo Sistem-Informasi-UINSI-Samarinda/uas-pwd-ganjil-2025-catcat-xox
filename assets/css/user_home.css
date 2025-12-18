@@ -8,59 +8,69 @@ body {
 }
 
 /* Hero section */
-.hero {
-    background-image: url('../../assets/images/background-2.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #000000;
-    padding-top: 20px;
+
+
+.hero-split {
+    margin: 30px;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 60vh;
 }
 
-.hero-content {
+/* Kiri teks */
+.hero-text {
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 65px;
+    gap: 25px;
+    background-color: #ffffff2b;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    animation: fadeIn 2s ease-in-out;
-    margin: 0 5px;
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #007bff;
 }
 
-.hero-content p {
-    padding-bottom: 65px;
-    text-align: center;
+.hero-text p {
     font-size: 1.2rem;
+    color: #555;
     max-width: 600px;
-    animation: fadeIn 2s ease-in-out 0.5s both;
-    margin: 0 5px;
 }
 
-.hero-content .btn {
-    top: 200px;
+.hero-text .btn {
+    width: fit-content;
     background-color: #28a745;
-    color: white;
-    padding: 15px 30px;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 5px;
     font-size: 1.1rem;
-    transition: background-color 0.3s;
-    animation: fadeIn 2s ease-in-out 1s both;
-    
+    transition: background 0.3s;
 }
 
-.hero-content .btn:hover {
+.hero-text .btn:hover {
     background-color: #218838;
 }
+
+/* Kanan gambar kos */
+.hero-image {
+    background-image: url('../../assets/images/background-22.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Overlay tipis agar elegan */
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(143, 143, 143, 0.1);
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -76,7 +86,7 @@ body {
 }
 
 .features h2 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 40px;
     color: #007bff;
 }
@@ -88,9 +98,8 @@ body {
 }
 
 .feature-item {
-    background-image: url('../../assets/images/background-3.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: white;
+    border-bottom: solid 5px #007bff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -103,7 +112,7 @@ body {
 }
 
 .feature-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
     color: #007bff;
 }
@@ -114,19 +123,19 @@ body {
 
 /* Bagian galeri */
 .gallery {
-    background-image: url('../../assets/images/background-13.jpg');
+    background-image: url('../../assets/images/background-11.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 10px;
     padding: 60px 20px;
-    max-width: 1200px;
+    max-width: 1160px;
     margin: 0 auto;
     text-align: center;
     background-image: url;
 }
 
 .gallery h2 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 40px;
     color: #007bff;
 }
@@ -142,11 +151,11 @@ body {
     position: relative;
     overflow: hidden;
     margin: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     border: solid 4px;
-    border-color: #4780bc;
+    border-color: #ffffff;
 }
 
 .gallery-item:hover {
@@ -154,7 +163,7 @@ body {
 }
 
 .gallery-item img {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -167,8 +176,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 123, 255, 0.258);
-    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.782);
+    color: rgb(19, 19, 19);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,9 +190,10 @@ body {
 }
 
 .gallery-item .overlay h4 {
+    font-weight: normal;
     border-radius: 5px;
     padding: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* Bagian testimonial */
@@ -195,7 +205,7 @@ body {
 }
 
 .testimonials h2 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 40px;
     color: #007bff;
 }
@@ -258,5 +268,27 @@ body {
     }
     .testimonial-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-split {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        padding: 40px 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        height: 300px;
     }
 }

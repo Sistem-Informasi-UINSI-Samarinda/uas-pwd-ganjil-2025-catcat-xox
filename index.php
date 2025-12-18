@@ -69,13 +69,23 @@ $current_page = basename($_SERVER['PHP_SELF']);
         
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
+    <section class="hero-split" id="home">
+
+        <div class="hero-text">
             <h1>Selamat Datang di Kos Berkah</h1>
-            <p>Temukan kenyamanan dan kemudahan tinggal di kos kami yang strategis, bersih, dan terjangkau. Cocok untuk mahasiswa, pekerja, atau siapa saja yang mencari hunian ideal.</p>
-            <a href="pages/users/Contact.php" class="btn">Hubungi Kami Sekarang</a>
+            <p>
+                Temukan kenyamanan dan kemudahan tinggal di kos kami yang strategis,
+                bersih, dan terjangkau. Cocok untuk mahasiswa dan pekerja.
+            </p>
+            <a href="pages/users/Contact.php" class="btn">
+                Hubungi Kami Sekarang
+            </a>
         </div>
+
+        <div class="hero-image"></div>
+
     </section>
+
 
     <section class="features">
         <h2>Kenapa Memilih Kos Kami?</h2>
@@ -109,9 +119,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/images/gambar_pemilik.jpg" alt="Lokasi Strategis">
+                <img src="assets/images/keamanan.jpg" alt="Lokasi Strategis">
                 <div class="overlay">
-                    <h4>Pemilik yang Ramah dan Baik Hati</h4>
+                    <h4>Sistem keamanan CCTV 24 jam</h4>
                 </div>
             </div>
             <div class="gallery-item">
